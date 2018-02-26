@@ -7,6 +7,7 @@
  * Time: 14:55
  */
 
+require __DIR__ . "/../../Model/Investor.php";
 require __DIR__ . "/../../Model/Investment.php";
 
 class InvestmentTest extends PHPUnit_Framework_TestCase
@@ -45,5 +46,16 @@ class InvestmentTest extends PHPUnit_Framework_TestCase
         $investor = $this->createMock('Investor');
         $investment = new Investment($investor, 100, new DateTime());
         $investment->addValue(-50);
+    }
+
+    /*
+     * interest formula InvestmentValue * InterestRate/100 * NumberOfDaysOfActiveInvestment / NumberOfDaysInMonth
+     */
+    public function testCalculateInterest_ReturnsArrayOfInvestorsNameAsKey_WithCalculatedInvestments()
+    {
+        $investor = $this->createMock('Investor');
+        $investment = new Investment($investor, 1000, new DateTime('03-10-2015'));
+        $value = $investment->calculateInterest(3, new DateTime('01-10-2015'), new DateTime('31-10-2015'));
+        $this->assertSame(28.06, $value);
     }
 }

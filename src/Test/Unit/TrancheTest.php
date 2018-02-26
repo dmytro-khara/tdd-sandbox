@@ -49,9 +49,6 @@ class TrancheTest extends PHPUnit_Framework_TestCase
         $this->assertContains($investment, $investments);
     }
 
-    /*
-     * interest formula InvestmentValue * InterestRate/100 * NumberOfDaysLeftInMonthWhenInvesting / NumberOfDaysInMonth
-     */
     public function testCalculateInterest_ReturnsArrayOfInvestorsNames_WithCalculatedInvestments()
     {
         $tranche = new Tranche(3, 1000);

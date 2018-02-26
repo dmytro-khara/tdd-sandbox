@@ -53,7 +53,7 @@ class Tranche extends Model
         $result = [];
 
         foreach ($this->investments as $investment) {
-            $result[] = $investment->calculateInterest();
+            $result[] = $investment->calculateInterest($this->interestRate);
         }
 
         return $result;

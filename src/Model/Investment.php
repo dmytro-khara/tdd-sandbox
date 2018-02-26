@@ -41,6 +41,9 @@ class Investment extends Model
         }
     }
 
+    /*
+     * interest formula InvestmentValue * InterestRate/100 * NumberOfDaysOfActiveInvestment / NumberOfDaysInMonth
+     */
     public function calculateInterest()
     {
 
