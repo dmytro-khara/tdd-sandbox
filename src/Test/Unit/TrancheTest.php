@@ -24,4 +24,11 @@ class TrancheTest extends PHPUnit_Framework_TestCase
         $this->assertSame(1000, $value);
     }
 
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testCreateTranche_WithInvalidRate()
+    {
+        $investment = new Tranche(3, 1000);
+    }
 }
