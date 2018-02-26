@@ -27,4 +27,13 @@ class InvestmentTest extends PHPUnit_Framework_TestCase
         $investor = '';
         $investment = new Investment($investor, -100, new DateTime());
     }
+
+    public function testGetInvestmentValue_AfterAddingMoreValue_ReturnsSumInvestedAmount()
+    {
+        $investor = '';
+        $investment = new Investment($investor, 100, new DateTime());
+        $investment->addValue(50);
+        $value = $investment->getValue();
+        $this->assertSame(150, $value);
+    }
 }
