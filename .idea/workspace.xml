@@ -94,7 +94,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Investment.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Investment.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Investment.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -141,18 +141,18 @@
       <file leaf-file-name="InvestorTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test/Unit/InvestorTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="629">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvestmentTest.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InvestmentTest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Test/Unit/InvestmentTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" column="68" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="68" />
+            <state relative-caret-position="374">
+              <caret line="27" column="49" lean-forward="false" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -179,8 +179,8 @@
         <option value="$PROJECT_DIR$/src/Controller/Controller.php" />
         <option value="$PROJECT_DIR$/src/Model/Investor.php" />
         <option value="$PROJECT_DIR$/src/Test/Unit/InvestorTest.php" />
-        <option value="$PROJECT_DIR$/src/Test/Unit/InvestmentTest.php" />
         <option value="$PROJECT_DIR$/src/Model/Investment.php" />
+        <option value="$PROJECT_DIR$/src/Test/Unit/InvestmentTest.php" />
       </list>
     </option>
   </component>
@@ -396,12 +396,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519647801311</updated>
-      <workItem from="1519647802662" duration="8015000" />
+      <workItem from="1519647802662" duration="8083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8015000" />
+    <option name="totallyTimeSpent" value="8083000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -543,26 +543,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Investment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/Unit/InvestorTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="629">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/Unit/InvestmentTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="68" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Investment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        <state relative-caret-position="374">
+          <caret line="27" column="49" lean-forward="false" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
           <folding />
         </state>
       </provider>

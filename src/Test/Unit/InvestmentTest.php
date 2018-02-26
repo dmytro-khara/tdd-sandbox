@@ -18,4 +18,13 @@ class InvestmentTest extends PHPUnit_Framework_TestCase
         $value = $investment->getValue();
         $this->assertSame(100, $value);
     }
+
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testGetInvestmentValue_WithInvalidValue_ThrowsException()
+    {
+        $investor = '';
+        $investment = new Investment($investor, -100, new DateTime());
+    }
 }
