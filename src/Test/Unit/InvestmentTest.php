@@ -54,8 +54,13 @@ class InvestmentTest extends PHPUnit_Framework_TestCase
     public function testCalculateInterest_ReturnsArrayOfInvestorsNameAsKey_WithCalculatedInvestments()
     {
         $investor = $this->createMock('Investor');
+
+        $investor
+            ->method('getName')
+            ->willReturn('Investor1');
+
         $investment = new Investment($investor, 1000, new DateTime('03-10-2015'));
         $value = $investment->calculateInterest(3, new DateTime('01-10-2015'), new DateTime('31-10-2015'));
-        $this->assertSame(28.06, $value);
+        $this->assertSame(['Investor1' => 28.06], $value);
     }
 }

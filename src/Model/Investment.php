@@ -44,8 +44,12 @@ class Investment extends Model
     /*
      * interest formula InvestmentValue * InterestRate/100 * NumberOfDaysOfActiveInvestment / NumberOfDaysInMonth
      */
-    public function calculateInterest()
+    public function calculateInterest($interestRate, $startDate, $endDate)
     {
-
+        $startDate = ($this->date >= $startDate) ? $this->date : $startDate;
+        $interval = intval(date_diff($startDate, $endDate)->format('%a')) + 1;
+        $numberOfDays = cal_days_in_month(CAL_GREGORIAN, $endDate->format('n'), $endDate->format('Y'));
+        $interest = $this->value * ($interestRate / 100) * ($interval / $numberOfDays);
+        return [$this->investor->getName() => round($interest, 2)];
     }
 }
