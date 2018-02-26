@@ -23,7 +23,7 @@ class Tranche extends Model
 
     public function getInterestRate()
     {
-
+        return $this->interestRate;
     }
 
     public function getMaxInvestmentValue()
