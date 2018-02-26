@@ -28,6 +28,35 @@ class Loan extends Model
 
     public function calculateTotalInterests($startDate, $endDate)
     {
+        $startDate = ($this->startDate >= $startDate) ? $this->startDate : $startDate;
+        $endDate = ($this->endDate <= $endDate) ? $this->endDate : $endDate;
 
+        $interests = [];
+
+        foreach ($this->tranches as $tranche) {
+            $interests[] = $tranche->calculateInterests($startDate, $endDate);
+        }
+
+        return $this->_mergeInterests($interests);
+    }
+
+    private function _mergeInterests($interests)
+    {
+        $merged = array();
+        foreach ($interests as $interest) {
+            foreach ($interest as $key => $value) {
+                if ( ! is_numeric($value)) {
+                    continue;
+                }
+                if ( ! isset($merged[$key])) {
+                    $merged[$key] = $value;
+                }
+                else {
+                    $merged[$key] += $value;
+                }
+            }
+        }
+
+        return $merged;
     }
 }

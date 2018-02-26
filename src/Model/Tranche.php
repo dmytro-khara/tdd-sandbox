@@ -62,7 +62,7 @@ class Tranche extends Model
         $result = [];
 
         foreach ($this->investments as $investment) {
-            $result[] = $investment->calculateInterest($this->interestRate, $startDate, $endDate);
+            $result = array_merge($result, $investment->calculateInterest($this->interestRate, $startDate, $endDate));
         }
 
         return $result;

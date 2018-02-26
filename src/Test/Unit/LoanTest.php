@@ -27,22 +27,22 @@ class LoanTest extends PHPUnit_Framework_TestCase
 
         $tranche1
             ->method('calculateInterests')
-            ->willReturn([['Investor1' =>50], ['Investor2' =>150]]);
+            ->willReturn(['Investor1' =>50, 'Investor2' =>150]);
 
         $tranche2 = $this->createMock('Tranche');
 
         $tranche2
             ->method('calculateInterests')
-            ->willReturn([['Investor1' =>50], ['Investor3' =>200]]);
+            ->willReturn(['Investor1' =>50, 'Investor3' =>200]);
 
         $loan->addTranche($tranche1);
         $loan->addTranche($tranche2);
         $interests = $loan->calculateTotalInterests(new DateTime('01-10-2015'), new DateTime('31-10-2015'));
 
         $expectedInterests = [
-            ['Investor1' =>100],
-            ['Investor2' =>150],
-            ['Investor3' =>200]
+            'Investor1' =>100,
+            'Investor2' =>150,
+            'Investor3' =>200
         ];
 
         $this->assertEquals($expectedInterests, $interests);

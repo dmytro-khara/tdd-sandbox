@@ -85,8 +85,8 @@ class TrancheTest extends PHPUnit_Framework_TestCase
         $interests = $tranche->calculateInterests(new DateTime('01-10-2015'), new DateTime('31-10-2015'));
 
         $expectedInterests = [
-            ['Investor1' =>28.6],
-            ['Investor2' =>21.29]
+            'Investor1' =>28.6,
+            'Investor2' =>21.29
         ];
 
         $this->assertEquals($expectedInterests, $interests);
