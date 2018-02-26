@@ -43,6 +43,16 @@ class InvestorTest extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @expectedException UnexpectedValueException
+     */
+    public function testGetInvestorWalletValue_AfterFoundsWithdrawal_WithInsufficientWalletValue_ThrowsException()
+    {
+        $investor = new Investor('Investor1');
+        $investor->addFunds(100);
+        $investor->withdrawFunds(150);
+    }
+
+    /**
      * @expectedException InvalidArgumentException
      */
     public function testGetInvestorWalletValue_WithInvalidFounds_ThrowsException()
