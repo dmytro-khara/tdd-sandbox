@@ -13,7 +13,7 @@ class InvestmentTest extends PHPUnit_Framework_TestCase
 {
     public function testGetInvestmentValue_ReturnsInvestedAmount()
     {
-        $investor = '';
+        $investor = $this->getMockClass('Investor');
         $investment = new Investment($investor, 100, new DateTime());
         $value = $investment->getValue();
         $this->assertSame(100, $value);
@@ -24,16 +24,26 @@ class InvestmentTest extends PHPUnit_Framework_TestCase
      */
     public function testGetInvestmentValue_WithInvalidValue_ThrowsException()
     {
-        $investor = '';
+        $investor = $this->getMockClass('Investor');
         $investment = new Investment($investor, -100, new DateTime());
     }
 
     public function testGetInvestmentValue_AfterAddingMoreValue_ReturnsSumInvestedAmount()
     {
-        $investor = '';
+        $investor = $this->getMockClass('Investor');
         $investment = new Investment($investor, 100, new DateTime());
         $investment->addValue(50);
         $value = $investment->getValue();
         $this->assertSame(150, $value);
+    }
+
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testGetInvestmentValue_AfterAddingMoreValue_WithInvalidValue_ReturnsSumInvestedAmount()
+    {
+        $investor = $this->getMockClass('Investor');
+        $investment = new Investment($investor, 100, new DateTime());
+        $investment->addValue(-50);
     }
 }
