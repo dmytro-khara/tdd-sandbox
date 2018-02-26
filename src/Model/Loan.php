@@ -6,8 +6,7 @@
  * Time: 14:51
  */
 
-namespace src\Model;
-
+require __DIR__ . "/Model.php";
 
 class Loan extends Model
 {

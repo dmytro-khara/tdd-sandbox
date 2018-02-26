@@ -6,8 +6,7 @@
  * Time: 14:52
  */
 
-namespace src\Model;
-
+require __DIR__ . "/Model.php";
 
 class Investment extends Model
 {

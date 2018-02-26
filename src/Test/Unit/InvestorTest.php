@@ -11,5 +11,9 @@ require __DIR__ . "/../../Model/Investor.php";
 
 class InvestorTest extends PHPUnit_Framework_TestCase
 {
-
+    public function testCreateInvestor_WithName_ReturnsTrue()
+    {
+        $investor = new Investor('Investor1');
+        $this->assertTrue($investor);
+    }
 }

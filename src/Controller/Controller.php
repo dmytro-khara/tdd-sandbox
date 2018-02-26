@@ -7,8 +7,6 @@
  * Time: 14:49
  */
 
-namespace src\Controller;
-
 abstract class Controller
 {
 
