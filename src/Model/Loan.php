@@ -25,4 +25,9 @@ class Loan extends Model
         $this->tranches[] = $tranche;
         return $this->tranches;
     }
+
+    public function calculateTotalInterests($startDate, $endDate)
+    {
+
+    }
 }

@@ -74,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Loan.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Loan.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Loan.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+            <state relative-caret-position="391">
+              <caret line="28" column="43" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -114,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoanTest.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoanTest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Test/Unit/LoanTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+            <state relative-caret-position="612">
+              <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
               <folding>
                 <element signature="e#7#95#0#PHP" expanded="true" />
               </folding>
@@ -129,7 +129,7 @@
       <file leaf-file-name="InvestmentTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test/Unit/InvestmentTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="852">
+            <state relative-caret-position="750">
               <caret line="62" column="105" lean-forward="false" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="105" />
               <folding />
             </state>
@@ -139,8 +139,8 @@
       <file leaf-file-name="TrancheTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test/Unit/TrancheTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="84" column="104" lean-forward="false" selection-start-line="84" selection-start-column="50" selection-end-line="84" selection-end-column="104" />
+            <state relative-caret-position="263">
+              <caret line="70" column="8" lean-forward="false" selection-start-line="70" selection-start-column="8" selection-end-line="91" selection-end-column="60" />
               <folding>
                 <element signature="e#7#95#0#PHP" expanded="true" />
               </folding>
@@ -193,8 +193,8 @@
         <option value="$PROJECT_DIR$/src/Model/Tranche.php" />
         <option value="$PROJECT_DIR$/src/Test/Unit/InvestorTest.php" />
         <option value="$PROJECT_DIR$/src/Model/Investor.php" />
-        <option value="$PROJECT_DIR$/src/Test/Unit/LoanTest.php" />
         <option value="$PROJECT_DIR$/src/Model/Loan.php" />
+        <option value="$PROJECT_DIR$/src/Test/Unit/LoanTest.php" />
       </list>
     </option>
   </component>
@@ -410,12 +410,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519647801311</updated>
-      <workItem from="1519647802662" duration="20145000" />
+      <workItem from="1519647802662" duration="20579000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20145000" />
+    <option name="totallyTimeSpent" value="20579000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -503,14 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/Unit/InvestmentTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="852">
-          <caret line="62" column="105" lean-forward="false" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="105" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/Unit/InvestorTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -537,26 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/Unit/TrancheTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="84" column="104" lean-forward="false" selection-start-line="84" selection-start-column="50" selection-end-line="84" selection-end-column="104" />
-          <folding>
-            <element signature="e#7#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/Unit/LoanTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-          <folding>
-            <element signature="e#7#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Investment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
@@ -573,11 +545,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/Unit/TrancheTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="70" column="8" lean-forward="false" selection-start-line="70" selection-start-column="8" selection-end-line="91" selection-end-column="60" />
+          <folding>
+            <element signature="e#7#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/Unit/InvestmentTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="62" column="105" lean-forward="false" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Loan.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+        <state relative-caret-position="391">
+          <caret line="28" column="43" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/Unit/LoanTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+          <folding>
+            <element signature="e#7#95#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
