@@ -33,6 +33,15 @@ class InvestorTest extends PHPUnit_Framework_TestCase
         $this->assertSame(100, $value);
     }
 
+    public function testGetInvestorWalletValue_AfterFoundsWithdrawal_ReturnsInvestedAmount()
+    {
+        $investor = new Investor('Investor1');
+        $investor->addFunds(100);
+        $investor->withdrawFunds(50);
+        $value = $investor->getWalletValue();
+        $this->assertSame(50, $value);
+    }
+
     /**
      * @expectedException InvalidArgumentException
      */

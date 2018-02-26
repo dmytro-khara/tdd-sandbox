@@ -39,4 +39,14 @@ class Investor extends Model
         }
 
     }
+
+    public function withdrawFunds($funds)
+    {
+        if(filter_var($funds, FILTER_VALIDATE_FLOAT) && $funds > 0) {
+            $this->walletValue -= $funds;
+            return true;
+        } else {
+            throw new InvalidArgumentException('Funds should be positive float');
+        }
+    }
 }
