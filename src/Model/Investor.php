@@ -12,6 +12,7 @@ require __DIR__ . "/Model.php";
 class Investor extends Model
 {
     private $name;
+    private $walletValue = 0;
 
     public function __construct($name)
     {
@@ -21,5 +22,10 @@ class Investor extends Model
     public function getName()
     {
         return $this->name;
+    }
+
+    public function getWalletValue()
+    {
+        return ;
     }
 }
