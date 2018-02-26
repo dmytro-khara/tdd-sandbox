@@ -17,7 +17,13 @@ class Tranche extends Model
 
     public function __construct($interestRate, $maxInvestmentValue)
     {
-        $this->interestRate = $interestRate;
+
+        if(filter_var($interestRate, FILTER_VALIDATE_FLOAT) && $interestRate > 0) {
+            $this->interestRate = $interestRate;
+        } else {
+            throw new InvalidArgumentException('Interest Rate should be positive float');
+        }
+
         $this->maxInvestmentValue = $maxInvestmentValue;
     }
 

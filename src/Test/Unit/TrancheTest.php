@@ -29,6 +29,6 @@ class TrancheTest extends PHPUnit_Framework_TestCase
      */
     public function testCreateTranche_WithInvalidRate()
     {
-        $investment = new Tranche(3, 1000);
+        $investment = new Tranche(-3, 1000);
     }
 }
