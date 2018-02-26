@@ -31,4 +31,12 @@ class TrancheTest extends PHPUnit_Framework_TestCase
     {
         $investment = new Tranche(-3, 1000);
     }
+
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testCreateTranche_WithInvalidMaxInvestmentValue()
+    {
+        $investment = new Tranche(3, -1000);
+    }
 }
