@@ -39,6 +39,6 @@ class InvestorTest extends PHPUnit_Framework_TestCase
     public function testGetInvestorWalletValue_WithInvalidFounds_ThrowsException()
     {
         $investor = new Investor('Investor1');
-        $investor->addFunds(100);
+        $investor->addFunds(-100);
     }
 }

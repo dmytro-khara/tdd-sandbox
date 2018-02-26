@@ -31,7 +31,12 @@ class Investor extends Model
 
     public function addFunds($funds)
     {
-        $this->walletValue += $funds;
-        return true;
+        if(filter_var($funds, FILTER_VALIDATE_FLOAT) && $funds > 0) {
+            $this->walletValue += $funds;
+            return true;
+        } else {
+            throw new InvalidArgumentException('Funds should be positive float');
+        }
+
     }
 }
