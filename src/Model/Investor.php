@@ -28,4 +28,9 @@ class Investor extends Model
     {
         return $this->walletValue;
     }
+
+    public function addFunds($funds)
+    {
+        return true;
+    }
 }
