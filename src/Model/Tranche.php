@@ -6,7 +6,7 @@
  * Time: 14:51
  */
 
-require __DIR__ . "/Model.php";
+require_once __DIR__ . "/Model.php";
 
 class Tranche extends Model
 {
@@ -46,5 +46,10 @@ class Tranche extends Model
     {
         $this->investments[] = $investment;
         return $this->investments;
+    }
+
+    public function calculateInterests()
+    {
+
     }
 }

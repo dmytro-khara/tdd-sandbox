@@ -6,7 +6,7 @@
  * Time: 14:52
  */
 
-require __DIR__ . "/Model.php";
+require_once __DIR__ . "/Model.php";
 
 class Investment extends Model
 {
@@ -27,15 +27,22 @@ class Investment extends Model
         $this->date = $date;
     }
 
-    public function getValue() {
+    public function getValue()
+    {
         return $this->value;
     }
 
-    public function addValue($value) {
+    public function addValue($value)
+    {
         if(filter_var($value, FILTER_VALIDATE_FLOAT) && $value > 0) {
             $this->value += $value;
         } else {
             throw new InvalidArgumentException('Value should be positive float');
         }
+    }
+
+    public function calculateInterest()
+    {
+
     }
 }

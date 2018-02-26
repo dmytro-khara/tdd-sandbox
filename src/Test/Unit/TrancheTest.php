@@ -8,6 +8,7 @@
  */
 
 require __DIR__ . "/../../Model/Tranche.php";
+require __DIR__ . "/../../Model/Investment.php";
 
 class TrancheTest extends PHPUnit_Framework_TestCase
 {
@@ -43,8 +44,39 @@ class TrancheTest extends PHPUnit_Framework_TestCase
     public function testAddInvestment_ReturnsArray_WithAddedInvestment()
     {
         $tranche = new Tranche(3, 1000);
-        $investment = $this->getMockClass('Investment');
+        $investment = $this->createMock('Investment');
         $investments = $tranche->addInvestment($investment);
         $this->assertContains($investment, $investments);
+    }
+
+    /*
+     * interest formula InvestmentValue * InterestRate/100 * NumberOfDaysLeftInMonthWhenInvesting / NumberOfDaysInMonth
+     */
+    public function testCalculateInterest_ReturnsArrayOfInvestorsNames_WithInvestmentValue_MultipliedByInterestRateDividedBy100_DividedByNUmberOfDaysInMonth_Multiplied()
+    {
+        $tranche = new Tranche(3, 1000);
+
+        $investment1 = $this->createMock('Investment');
+
+        $investment1
+            ->method('calculateInterest')
+            ->willReturn(['Investor1' =>28.6]);
+
+        $investment2 = $this->createMock('Investment');
+
+        $investment2
+            ->method('calculateInterest')
+            ->willReturn(['Investor2' =>21.29]);
+
+        $tranche->addInvestment($investment1);
+        $tranche->addInvestment($investment2);
+        $interests = $tranche->calculateInterests();
+
+        $expectedInterests = [
+            ['Investor1' =>28.6],
+            ['Investor2' =>21.29]
+        ];
+
+        $this->assertEquals($expectedInterests, $interests);
     }
 }
