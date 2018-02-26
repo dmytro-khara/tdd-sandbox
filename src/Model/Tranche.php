@@ -48,12 +48,12 @@ class Tranche extends Model
         return $this->investments;
     }
 
-    public function calculateInterests()
+    public function calculateInterests($startDate, $endDate)
     {
         $result = [];
 
         foreach ($this->investments as $investment) {
-            $result[] = $investment->calculateInterest($this->interestRate);
+            $result[] = $investment->calculateInterest($this->interestRate, $startDate, $endDate);
         }
 
         return $result;

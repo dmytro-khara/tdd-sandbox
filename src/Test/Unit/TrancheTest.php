@@ -49,6 +49,21 @@ class TrancheTest extends PHPUnit_Framework_TestCase
         $this->assertContains($investment, $investments);
     }
 
+    /**
+     * @expectedException UnexpectedValueException
+     */
+    public function testAddInvestment_WithValueGreaterThenCurrentMaxInvestmentValue()
+    {
+        $tranche = new Tranche(3, 1000);
+        $investment = $this->createMock('Investment');
+
+        $investment
+            ->method('getValue')
+            ->willReturn(1100);
+
+        $investments = $tranche->addInvestment($investment);
+    }
+
     public function testCalculateInterest_ReturnsArrayOfInvestorsNames_WithCalculatedInvestments()
     {
         $tranche = new Tranche(3, 1000);
@@ -67,7 +82,7 @@ class TrancheTest extends PHPUnit_Framework_TestCase
 
         $tranche->addInvestment($investment1);
         $tranche->addInvestment($investment2);
-        $interests = $tranche->calculateInterests();
+        $interests = $tranche->calculateInterests(new DateTime('01-10-2015'), new DateTime('31-10-2015'));
 
         $expectedInterests = [
             ['Investor1' =>28.6],
@@ -81,7 +96,7 @@ class TrancheTest extends PHPUnit_Framework_TestCase
     {
         $tranche = new Tranche(3, 1000);
 
-        $interests = $tranche->calculateInterests();
+        $interests = $tranche->calculateInterests(new DateTime('01-10-2015'), new DateTime('31-10-2015'));
 
         $expectedInterests = [
 
