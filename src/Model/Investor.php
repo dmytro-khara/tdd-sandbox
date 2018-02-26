@@ -26,6 +26,6 @@ class Investor extends Model
 
     public function getWalletValue()
     {
-        return ;
+        return $this->walletValue;
     }
 }
