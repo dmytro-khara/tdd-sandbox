@@ -44,8 +44,17 @@ class Tranche extends Model
 
     public function addInvestment($investment)
     {
-        $this->investments[] = $investment;
-        return $this->investments;
+        $currentRemainingInvestment = $this->maxInvestmentValue - $this->currentInvestmentValue;
+        $investmentValue = $investment->getValue();
+
+        if($investmentValue <= $currentRemainingInvestment) {
+            $this->investments[] = $investment;
+            $this->currentInvestmentValue += $investmentValue;
+            return $this->investments;
+        } else {
+            throw new UnexpectedValueException('Investment Value greater then is available for further investments. Current remaining value is ' . $currentRemainingInvestment);
+        }
+
     }
 
     public function calculateInterests($startDate, $endDate)
