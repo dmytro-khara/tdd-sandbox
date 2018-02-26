@@ -42,8 +42,9 @@ class Tranche extends Model
         return $this->maxInvestmentValue;
     }
 
-    public function addInvestment()
+    public function addInvestment($investment)
     {
-
+        $this->investments[] = $investment;
+        return $this->investments;
     }
 }

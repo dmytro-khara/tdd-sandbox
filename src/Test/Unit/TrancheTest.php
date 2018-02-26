@@ -44,7 +44,7 @@ class TrancheTest extends PHPUnit_Framework_TestCase
     {
         $tranche = new Tranche(3, 1000);
         $investment = $this->getMockClass('Investment');
-        $investments = $tranche->addInvestment();
+        $investments = $tranche->addInvestment($investment);
         $this->assertContains($investment, $investments);
     }
 }
