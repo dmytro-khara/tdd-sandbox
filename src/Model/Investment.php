@@ -31,7 +31,7 @@ class Investment extends Model
         return $this->value;
     }
 
-    public function addValue() {
-
+    public function addValue($value) {
+        $this->value += $value;
     }
 }
