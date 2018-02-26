@@ -84,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tranche.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Tranche.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Model/Tranche.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="76" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="76" />
+            <state relative-caret-position="357">
+              <caret line="26" column="88" lean-forward="false" selection-start-line="26" selection-start-column="88" selection-end-line="26" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -126,7 +126,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TrancheTest.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TrancheTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test/Unit/TrancheTest.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="629">
@@ -179,8 +179,8 @@
         <option value="$PROJECT_DIR$/src/Test/Unit/InvestorTest.php" />
         <option value="$PROJECT_DIR$/src/Test/Unit/InvestmentTest.php" />
         <option value="$PROJECT_DIR$/src/Model/Investment.php" />
-        <option value="$PROJECT_DIR$/src/Model/Tranche.php" />
         <option value="$PROJECT_DIR$/src/Test/Unit/TrancheTest.php" />
+        <option value="$PROJECT_DIR$/src/Model/Tranche.php" />
       </list>
     </option>
   </component>
@@ -396,12 +396,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519647801311</updated>
-      <workItem from="1519647802662" duration="9602000" />
+      <workItem from="1519647802662" duration="9684000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9602000" />
+    <option name="totallyTimeSpent" value="9684000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -541,14 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Tranche.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="76" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/Unit/InvestmentTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -564,6 +556,14 @@
           <folding>
             <element signature="e#7#95#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Tranche.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="88" lean-forward="false" selection-start-line="26" selection-start-column="88" selection-end-line="26" selection-end-column="88" />
+          <folding />
         </state>
       </provider>
     </entry>

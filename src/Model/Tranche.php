@@ -24,7 +24,12 @@ class Tranche extends Model
             throw new InvalidArgumentException('Interest Rate should be positive float');
         }
 
-        $this->maxInvestmentValue = $maxInvestmentValue;
+        if(filter_var($maxInvestmentValue, FILTER_VALIDATE_FLOAT) && $maxInvestmentValue > 0) {
+            $this->maxInvestmentValue = $maxInvestmentValue;
+        } else {
+            throw new InvalidArgumentException('Max Investment Value should be positive float');
+        }
+
     }
 
     public function getInterestRate()
