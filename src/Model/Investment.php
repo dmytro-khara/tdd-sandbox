@@ -22,6 +22,6 @@ class Investment extends Model
     }
 
     public function getValue() {
-        return;
+        return $this->value;
     }
 }
