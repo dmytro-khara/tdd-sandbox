@@ -52,7 +52,7 @@ class TrancheTest extends PHPUnit_Framework_TestCase
     /*
      * interest formula InvestmentValue * InterestRate/100 * NumberOfDaysLeftInMonthWhenInvesting / NumberOfDaysInMonth
      */
-    public function testCalculateInterest_ReturnsArrayOfInvestorsNames_WithInvestmentValue_MultipliedByInterestRateDividedBy100_DividedByNUmberOfDaysInMonth_Multiplied()
+    public function testCalculateInterest_ReturnsArrayOfInvestorsNames_WithCalculatedInvestments()
     {
         $tranche = new Tranche(3, 1000);
 
@@ -75,6 +75,19 @@ class TrancheTest extends PHPUnit_Framework_TestCase
         $expectedInterests = [
             ['Investor1' =>28.6],
             ['Investor2' =>21.29]
+        ];
+
+        $this->assertEquals($expectedInterests, $interests);
+    }
+
+    public function testCalculateInterest_WithNoInvestments_ReturnsEmptyArray()
+    {
+        $tranche = new Tranche(3, 1000);
+
+        $interests = $tranche->calculateInterests();
+
+        $expectedInterests = [
+
         ];
 
         $this->assertEquals($expectedInterests, $interests);
