@@ -20,8 +20,9 @@ class Loan extends Model
         $this->endDate = $endDate;
     }
 
-    public function addTranche()
+    public function addTranche($tranche)
     {
-
+        $this->tranches[] = $tranche;
+        return $this->tranches;
     }
 }
