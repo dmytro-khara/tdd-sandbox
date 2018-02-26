@@ -11,5 +11,15 @@ require __DIR__ . "/Model.php";
 
 class Investor extends Model
 {
+    private $name;
 
+    public function __construct($name)
+    {
+        $this->name = $name;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
 }
