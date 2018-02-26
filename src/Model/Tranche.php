@@ -50,6 +50,12 @@ class Tranche extends Model
 
     public function calculateInterests()
     {
+        $result = [];
 
+        foreach ($this->investments as $investment) {
+            $result[] = $investment->calculateInterest();
+        }
+
+        return $result;
     }
 }
