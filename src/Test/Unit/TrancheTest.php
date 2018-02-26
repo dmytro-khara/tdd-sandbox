@@ -13,14 +13,14 @@ class TrancheTest extends PHPUnit_Framework_TestCase
 {
     public function testGetInterestRate_ReturnsPresetAmount()
     {
-        $investment = new Tranche(3, 1000);
-        $value = $investment->getInterestRate();
+        $tranche = new Tranche(3, 1000);
+        $value = $tranche->getInterestRate();
         $this->assertSame(3, $value);
     }
     public function testGetMaxInvestmentValue_ReturnsPresetAmount()
     {
-        $investment = new Tranche(3, 1000);
-        $value = $investment->getMaxInvestmentValue();
+        $tranche = new Tranche(3, 1000);
+        $value = $tranche->getMaxInvestmentValue();
         $this->assertSame(1000, $value);
     }
 
@@ -29,7 +29,7 @@ class TrancheTest extends PHPUnit_Framework_TestCase
      */
     public function testCreateTranche_WithInvalidRate()
     {
-        $investment = new Tranche(-3, 1000);
+        $tranche = new Tranche(-3, 1000);
     }
 
     /**
@@ -37,6 +37,14 @@ class TrancheTest extends PHPUnit_Framework_TestCase
      */
     public function testCreateTranche_WithInvalidMaxInvestmentValue()
     {
-        $investment = new Tranche(3, -1000);
+        $tranche = new Tranche(3, -1000);
+    }
+
+    public function testAddInvestment_ReturnsArray_WithAddedInvestment()
+    {
+        $tranche = new Tranche(3, 1000);
+        $investment = $this->getMockClass('Investment');
+        $investments = $tranche->addInvestment();
+        $this->assertContains($investment, $investments);
     }
 }
