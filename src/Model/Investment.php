@@ -17,7 +17,13 @@ class Investment extends Model
     public function __construct($investor, $value, $date)
     {
         $this->investor = $investor;
-        $this->value = $value;
+
+        if(filter_var($value, FILTER_VALIDATE_FLOAT) && $value > 0) {
+            $this->value = $value;
+        } else {
+            throw new InvalidArgumentException('Value should be positive float');
+        }
+
         $this->date = $date;
     }
 
