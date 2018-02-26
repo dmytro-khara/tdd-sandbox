@@ -17,4 +17,11 @@ class TrancheTest extends PHPUnit_Framework_TestCase
         $value = $investment->getInterestRate();
         $this->assertSame(3, $value);
     }
+    public function testGetMaxInvestmentValue_ReturnsPresetAmount()
+    {
+        $investment = new Tranche(3, 1000);
+        $value = $investment->getMaxInvestmentValue();
+        $this->assertSame(1000, $value);
+    }
+
 }
