@@ -31,6 +31,7 @@ class Investor extends Model
 
     public function addFunds($funds)
     {
+        $this->walletValue += $funds;
         return true;
     }
 }
