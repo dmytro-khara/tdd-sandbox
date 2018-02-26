@@ -28,6 +28,6 @@ class Tranche extends Model
 
     public function getMaxInvestmentValue()
     {
-
+        return $this->maxInvestmentValue;
     }
 }
