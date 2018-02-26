@@ -43,8 +43,12 @@ class Investor extends Model
     public function withdrawFunds($funds)
     {
         if(filter_var($funds, FILTER_VALIDATE_FLOAT) && $funds > 0) {
-            $this->walletValue -= $funds;
-            return true;
+            if($this->walletValue >= $funds) {
+                $this->walletValue -= $funds;
+                return true;
+            } else {
+                throw new UnexpectedValueException('Wallet Value is insufficient. Current remaining value is ' . $this->walletValue);
+            }
         } else {
             throw new InvalidArgumentException('Funds should be positive float');
         }
