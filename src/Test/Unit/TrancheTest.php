@@ -11,5 +11,10 @@ require __DIR__ . "/../../Model/Tranche.php";
 
 class TrancheTest extends PHPUnit_Framework_TestCase
 {
-
+    public function testGetInterestRate_ReturnsPresetAmount()
+    {
+        $investment = new Tranche(3, 1000);
+        $value = $investment->getInterestRate();
+        $this->assertSame(3, $value);
+    }
 }
